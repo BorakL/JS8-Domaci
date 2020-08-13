@@ -1,0 +1,25 @@
+
+#pokemoni{
+    width:70vw;
+}
+.grid-container>img{
+    width:20vw;
+    height:auto;
+    margin:auto;
+} 
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.4fr 1.6fr;
+    gap: 1px 1px;
+    grid-template-areas: "title title" "description img";
+    border-bottom:1px solid grey;
+    margin-bottom:60px;
+}
+.title { grid-area: title; margin:auto; font-size: 2em; }
+.img { grid-area: img; }
+.description { 
+    grid-area: description; 
+    align-self:center; 
+    padding:auto;
+}

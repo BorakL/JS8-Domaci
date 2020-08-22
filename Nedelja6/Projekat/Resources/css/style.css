@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: arial;
+    color:rgb(90, 90, 90);
+}
+
+header{ 
+    background-image:linear-gradient(rgb(146, 144, 144),rgb(192, 183, 204));
+    padding:1px 0 8px 0;
+}
+header p{
+    text-align: center; 
+    font-size: 1.2em;
+    color:white;
+    margin:20px;
+}
+header>p>span.date{
+    color:white;
+}
+header>p.balance{
+    font-size: 2.2em;
+    color:white;
+}
+header>div.sum{
+    width:400px;
+    overflow: hidden;
+    height:50px; 
+    margin:10px auto;
+}
+header>div.sum>span{
+    display: inline-block;
+    margin-top:calc((50px - 1em)/2);
+    padding:0 10px;
+}
+header>div.sum>span.amount{
+    float: right;
+    margin-right: 30px;
+}
+header>div.sum.revenue{
+    background-color: rgb(0, 238, 238);
+}
+header>div.sum.expense{
+    background-color:rgb(255, 131, 131); 
+}
+
+
+div#inputs>form{
+    background-color: whitesmoke;
+    text-align:center; 
+    border:1px solid lightgray;
+    padding:15px;
+}
+div#inputs>form>*{
+    display: inline-block;
+    height: 40px;
+    margin:0 5px;
+    border:1px solid lightgrey;
+    border-radius: 3px;
+    padding:0 10px;
+} 
+
+div#inputs>form>#transaction-type{
+    width: 50px;
+    padding:0;
+}
+div#inputs>form>#transaction-description{
+    width: 340px;
+}
+div#inputs>form>#transaction-submit:hover{
+    cursor:pointer;
+    background-color: lightgrey;
+}
+
+
+
+
+main.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 'prihod' 'rashod';
+    grid-gap: 60px;
+    padding: 55px 160px
+}
+
+main.grid-container>.revenue{
+    gird-area: prihod;
+}
+main.grid-container>.expense{
+    gird-area: rashod;
+}
+main.grid-container>section>*{
+    border-bottom:1px solid grey; 
+    padding:15px 0;
+}
+main.grid-container>section>:first-child{
+    font-size: 1.3em;
+}
+main.grid-container>section.revenue>:first-child, 
+section.revenue>.item>.item-amount{
+    color:green;
+}
+main.grid-container>section.expense>:first-child, 
+section.expense>.item>.item-amount{
+     color:red;
+}
+main.grid-container>section>.item{
+    font-size: 1.2em;
+    padding: 15px;
+    transition: opacity 0.3s;
+}
+main.grid-container>section>.item:nth-child(odd){
+    background-color: whitesmoke;
+}
+main.grid-container>section>.item>span.item-description{
+    display: inline-block;
+    max-width: 60%;
+    overflow:hidden ;
+    height: auto;
+}
+main.grid-container>section>.item>span.item-amount{
+    display: inline-block;
+    float:right;
+    max-width: 120px;
+    overflow:hidden ;
+    margin-right: 15px; 
+} 
+main.grid-container>section>.item>.delete{
+    float:right; 
+    display: none;
+    position:relative;
+    bottom:0.3em; 
+    font-size:2em;
+}
+main.grid-container>section>.item>.delete>i:hover{
+     color: red;
+     cursor:pointer;
+}
+main.grid-container>section>.item:hover > .delete{
+    display: inline-block;
+}
+main.grid-container>section>.item>.expense-percent{
+    float:right;
+    display: inline-block; 
+    margin-right: 30px;
+    font-size: 0.8em;
+    background-color:whitesmoke;
+    padding: 4px 4px 2px 4px;
+}

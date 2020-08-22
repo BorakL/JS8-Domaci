@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">
+        <title>Budzet</title>
+        <link rel="stylesheet" href="Resources/css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <p>Dostupan budžet u <span class="date"></span></p>
+            <p class="balance amount">0</p>
+            <div class="sum revenue">
+                <span>PRIHOD</span>
+                <span class="amount">0</span>
+            </div>
+            <div class="sum expense">
+                <span>RASHOD</span>
+                <span class="amount">0</span>
+            </div>
+        </header>
+        <div id="inputs">
+            <form>
+                <select id="transaction-type">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+                <input type="text" id="transaction-description" placeholder="Opis">
+                <input type="number" id="transaction-amount" placeholder="Iznos">
+                <input type="submit" id="transaction-submit" value="Prosledi transakciju">
+            </form>
+        </div>
+        <main class="grid-container">
+            <section class="revenue">
+                <div>PRIHODI</div>
+                
+            </section>
+            <section class="expense">
+                <div>RASHODI</div>
+                 
+            </section>
+        </main> 
+        <script type="module" src="Resources/js/index.js"></script>
+        
+    </body>
+</html>
